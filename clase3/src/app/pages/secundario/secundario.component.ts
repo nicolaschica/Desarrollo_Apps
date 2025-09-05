@@ -1,32 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-secundario',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  imports: [],
+  templateUrl: './secundario.component.html',
+  styleUrl: './secundario.component.css'
 })
-export class AppComponent {
-  title = 'clase2';
-  // cambio = 0;
-
-  // constructor() {
-  //   this.cambiartitulo();
-  // }
-
-  // cambiartitulo() {
-  //   if (this.cambio == 0) {
-  //     this.title = "Primer titulo";
-  //     this.cambio = 1;
-  //   } else {
-  //     this.title = "Clase2";
-  //     this.cambio = 0;
-  //   }
-  //   // const inputElement = document.getElementById('titulo') as HTMLInputElement;
-  //   // this.title = inputElement.value;
-  // }
+export class SecundarioComponent {
 
   aggbtn() {
     const productInput = document.getElementById('inputText') as HTMLInputElement;
@@ -52,4 +33,7 @@ export class AppComponent {
        
     productInput.value = '';
   }
+
+
+
 }

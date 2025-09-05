@@ -1,0 +1,27 @@
+h1{
+    color: orange;
+    font-family: comic sans ms;
+    height: 100px;
+    text-align: center;
+    border: 1px solid black;
+    padding-top: 40px;
+    background: #79716B;
+}
+
+h3{
+    text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-right: 10px;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+
+nav{
+    text-align: center;
+}
