@@ -1,0 +1,33 @@
+<div>
+  <div class="cart-header">
+    <button class="cart-btn">
+      Carrito ({{carrito.length}})
+    </button>
+  </div>
+  <h2>Productos FakeStore</h2>
+
+  <!-- Iterar categorías -->
+  <div *ngFor="let categoria of groupedProducts | keyvalue">
+    <h3 class="categoria-titulo">{{ categoria.key }}</h3>
+    <hr />
+
+    <div class="grid">
+      <div *ngFor="let p of categoria.value" class="card">
+        <img *ngIf="p.image" [src]="p.image" [alt]="p.title" />
+        <h3>{{ p.title }}</h3>
+        <p>${{ p.price }}</p>
+        <p>{{ p.rating.rate }} ({{ p.rating?.count }})</p>
+        <button (click)="agg(p)" class="buy-btn">Comprar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-summary">
+    <h3>Productos seleccionados:</h3>
+    <div *ngFor="let item of carrito; let i = index" class="cart-item">
+      <span>{{item.title}} - ${{item.price}}</span>
+      <button (click)="remove(i)">Eliminar</button>
+    </div>
+    <h3>Total: ${{ total.toFixed(2) }}</h3>
+  </div>
+</div>
