@@ -22,19 +22,8 @@ export class ProductsPageComponent {
     this.service.getProducts().subscribe({
       next: (list) => {
         this.products = list;
-        this.groupedProducts = this.groupByCategory(list);
       },
     });
-  }
-
-  private groupByCategory(products: any[]): { [key: string]: any[] } {
-    return products.reduce((groups, product) => {
-      if (!groups[product.category]) {
-        groups[product.category] = [];
-      }
-      groups[product.category].push(product);
-      return groups;
-    }, {} as { [key: string]: any[] });
   }
 
   agg(product: any) {

@@ -6,13 +6,8 @@
   </div>
   <h2>Productos FakeStore</h2>
 
-  <!-- Iterar categorías -->
-  <div *ngFor="let categoria of groupedProducts | keyvalue">
-    <h3 class="categoria-titulo">{{ categoria.key }}</h3>
-    <hr />
-
     <div class="grid">
-      <div *ngFor="let p of categoria.value" class="card">
+      <div *ngFor="let p of products" class="card">
         <img *ngIf="p.image" [src]="p.image" [alt]="p.title" />
         <h3>{{ p.title }}</h3>
         <p>${{ p.price }}</p>
@@ -30,4 +25,3 @@
     </div>
     <h3>Total: ${{ total.toFixed(2) }}</h3>
   </div>
-</div>
